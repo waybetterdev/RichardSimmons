@@ -3,6 +3,6 @@ export HUBOT_JIRA_URL="https://waybetter.atlassian.net"
 export HUBOT_JIRA_USER="robot" 
 export HUBOT_JIRA_USER_AGENT="RichardSimmons"
 export HUBOT_JIRA_PASSWORD="" #Add robot Password
-echo "Starting RichardSimmons..."
+echo "Starting richard_simmons..."
 bin/hubot -a slack
-echo "RichardSimmons has started."
+echo "richard_simmons has started."

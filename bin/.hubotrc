@@ -1,6 +1,6 @@
 #---------------- HUBOT CONFIG -----------------------------------
 export HUBOT_ADAPTER="slack"
-export HUBOT_PATH="/home/rcohen/RichardSimmons"
+export HUBOT_PATH="/home/tdogg/RichardSimmons"
 export HUBOT_SLACK_TOKEN=xoxb-10366194083-piUfKQUdROa7OSmkLAIg0npQ
 #---------------- END HUBOT CONFIG --------------------------------
 npm install
