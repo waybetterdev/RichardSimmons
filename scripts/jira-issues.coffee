@@ -5,11 +5,11 @@
 #   None
 #
 # Configuration:
-#   HUBOT_JIRA_LOOKUP_USERNAME
-#   HUBOT_JIRA_LOOKUP_PASSWORD
-#   HUBOT_JIRA_LOOKUP_URL
-#   HUBOT_JIRA_LOOKUP_IGNORE_USERS (optional, format: "user1|user2", default is "jira|github")
-#   HUBOT_JIRA_LOOKUP_SIMPLE
+#   HUBOT_JIRA_USERNAME
+#   HUBOT_JIRA_PASSWORD
+#   HUBOT_JIRA_URL
+#   HUBOT_JIRA_IGNORE_USERS (optional, format: "user1|user2", default is "jira|github")
+#   HUBOT_JIRA_SIMPLE
 #
 # Commands:
 #   None
@@ -21,7 +21,7 @@
 
 module.exports = (robot) ->
 
-  ignored_users = process.env.HUBOT_JIRA_LOOKUP_IGNORE_USERS
+  ignored_users = process.env.HUBOT_JIRA_IGNORE_USERS
   if ignored_users == undefined
     ignored_users = "jira|github"
 
@@ -31,12 +31,12 @@ module.exports = (robot) ->
 
     issue = msg.match[0]
 
-    if process.env.HUBOT_JIRA_LOOKUP_SIMPLE is "false"
-      msg.send "Issue: #{issue} - #{process.env.HUBOT_JIRA_LOOKUP_URL}/browse/#{issue}"
+    if process.env.HUBOT_JIRA_SIMPLE is "false"
+      msg.send "Issue: #{issue} - #{process.env.HUBOT_JIRA_URL}/browse/#{issue}"
     else
-      user = process.env.HUBOT_JIRA_LOOKUP_USERNAME
-      pass = process.env.HUBOT_JIRA_LOOKUP_PASSWORD
-      url = process.env.HUBOT_JIRA_LOOKUP_URL
+      user = process.env.HUBOT_JIRA_USERNAME
+      pass = process.env.HUBOT_JIRA_PASSWORD
+      url = process.env.HUBOT_JIRA_URL
 
       auth = 'Basic ' + new Buffer(user + ':' + pass).toString('base64')
 
@@ -57,7 +57,7 @@ module.exports = (robot) ->
               }
               'link': {
                 key: 'Link'
-                value: "#{process.env.HUBOT_JIRA_LOOKUP_URL}/browse/#{json.key}"
+                value: "#{process.env.HUBOT_JIRA_URL}/browse/#{json.key}"
               }
               'description': {
                 key: 'Description',
