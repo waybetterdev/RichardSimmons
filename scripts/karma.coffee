@@ -55,10 +55,12 @@ class Karma
   decrementResponse: ->
      @decrement_responses[Math.floor(Math.random() * @decrement_responses.length)]
 
-  selfDeniedResponses: (name) ->
+  selfDeniedIncrementResponses: (name) ->
     @self_denied_responses = [
       "Hey everyone! #{name} is a narcissist!",
       "#{name}, how about a pat on the back instead?",
+      "#{name}, how many selfies do you take a day?",
+      "#{name}, just got back from the center of the universe and you weren't there!",
       "#{name}, you could always high-five yourself!"
     ]  
 
@@ -66,6 +68,8 @@ class Karma
     @self_denied_responses = [
       "#{name}, you might not love you but I do!",
       "Hey #{name}, be kind to yourself!",
+      "#{name}, how about a digital hug instead?",
+      "#{name}, stop beating yourself up!",
       "#{name}, have you forgotten how awesome you are?!"
     ]
 
@@ -99,7 +103,7 @@ module.exports = (robot) ->
       karma.increment subject
       msg.send "#{subject} #{karma.incrementResponse()} (Karma: #{karma.get(subject)})"
     else
-      msg.send msg.random karma.selfDeniedResponses(msg.message.user.name)
+      msg.send msg.random karma.selfDeniedIncrementResponses(msg.message.user.name)
 
   robot.hear /(\S+[^-:\s])[: ]*--(\s|$)/, (msg) ->
     subject = msg.match[1].toLowerCase()
