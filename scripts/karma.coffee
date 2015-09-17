@@ -66,7 +66,7 @@ class Karma
     @self_denied_responses = [
       "#{name}, you might not love you but I do!",
       "Hey #{name}, be kind to yourself!",
-      "#{name}, have you forgotten how awesome you are?!."
+      "#{name}, have you forgotten how awesome you are?!"
     ]
 
   get: (thing) ->
