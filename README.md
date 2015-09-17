@@ -13,18 +13,6 @@ has, etc!
 [generator-hubot]: https://github.com/github/generator-hubot
 
 ## Scripts
-#### Deep Thoughts 
-##### Trigger: deep
-This accesses a randomiser that creates a faux deep though.
-
-    {"id": 259, "thought":"Consider the daffodil. And while you're doing that, I'll be over here, looking through your stuff."}
-#### Ping Pong
-##### Trigger: ping
-Returns:
-
-    pong
-    PONG
-
 #### Time Zone
 ##### Trigger: time in <city>
 You input a city and it returns the time in that city. 
