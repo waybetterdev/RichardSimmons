@@ -31,7 +31,7 @@ module.exports = (robot) ->
 
     issue = msg.match[0]
 
-    if process.env.HUBOT_JIRA_LOOKUP_SIMPLE is "true"
+    if process.env.HUBOT_JIRA_LOOKUP_SIMPLE is "false"
       msg.send "Issue: #{issue} - #{process.env.HUBOT_JIRA_LOOKUP_URL}/browse/#{issue}"
     else
       user = process.env.HUBOT_JIRA_LOOKUP_USERNAME
