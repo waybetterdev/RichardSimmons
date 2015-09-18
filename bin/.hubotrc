@@ -7,5 +7,5 @@ npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 export HUBOT_JIRA_URL="https://waybetter.atlassian.net"
 export HUBOT_JIRA_USER="robot"
-export HUBOT_JIRA_USER_AGENT="richard_simmons"
-export HUBOT_JIRA_PASSWORD="" #Add robot Password
+export HUBOT_JIRA_USER_AGENT="robot"
+export HUBOT_JIRA_PASSWORD="" 
