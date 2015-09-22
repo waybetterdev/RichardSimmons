@@ -8,6 +8,7 @@
   "hubot-pugme",
   "hubot-maps",
   "hubot-redis-brain",
+  "hubot-quote",
   "hubot-rules",
   "hubot-shipit",
   "hubot-time-me",

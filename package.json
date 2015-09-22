@@ -16,6 +16,7 @@
     "hubot-jira-lookup": "git://github.com/jivesoftware/hubot-jira-lookup.git",
     "hubot-maps": "0.0.2",
     "hubot-pugme": "^0.1.0",
+    "hubot-quote": "^3.0.0",
     "hubot-redis-brain": "0.0.3",
     "hubot-rules": "^0.1.1",
     "hubot-schedule": "~0.2.1",
