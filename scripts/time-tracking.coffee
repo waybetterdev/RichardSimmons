@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot sveglia <name> <duration> - Start countdown timer for <duration> seconds
+#   hubot countdown <name> <duration> - Start countdown timer for <duration> seconds
 #   countdown set #meetupname# #datestring# e.g. countdown set punerbmeetup 21 Jan 2014
 #   countdown [for] #meetupname# e.g. countdown punerbmeetup
 #   countdown list 
@@ -23,7 +23,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /(sveglia|timer) ([\w .-_]+) ([0-9]+)/i, (msg) ->
+  robot.respond /(countdown|timer) ([\w .-_]+) ([0-9]+)/i, (msg) ->
     name    = msg.match[2]
     seconds = msg.match[3]
     delay   = (ms, func) -> setTimeout func, ms
