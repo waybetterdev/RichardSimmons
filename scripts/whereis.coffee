@@ -40,8 +40,6 @@
 
 module.exports = (robot) -> 
 
-  robot.respond /([\w\-]+) I am in (.*)/i,
-                /([\w\-]+) I am at (.*)/i,
-                /([\w\-]+) I'm at (.*)/i,
-                /([\w\-]+) I will be (back|in|at|on|under|above) (.*)/i,
-                /([\w\-]+) I'll be (back|in|at|on|under|above)(.*)/i, (msg)
+  robot.respond /([\w\-]+) (I am|I'm|I'll) (be|in|at) (back|in|at|on|under|above) (.*)/i, (text)
+    user = text.match[1]
+    message = text.match[2]
