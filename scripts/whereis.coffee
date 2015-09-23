@@ -2,10 +2,10 @@
 #   Records time and away message users set.
 #
 # Dependencies:
-#   "<module name>": "<module version>"
+#   none
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   none
 #
 # Commands:
 #   hubot I am in <text>
@@ -37,3 +37,11 @@
 #
 # Author:
 #   Teresa Nededog
+
+module.exports = (robot) -> 
+
+  robot.respond /([\w\-]+) I am in (.*)/i,
+                /([\w\-]+) I am at (.*)/i,
+                /([\w\-]+) I'm at (.*)/i,
+                /([\w\-]+) I will be (back|in|at|on|under|above) (.*)/i,
+                /([\w\-]+) I'll be (back|in|at|on|under|above)(.*)/i, (msg)
