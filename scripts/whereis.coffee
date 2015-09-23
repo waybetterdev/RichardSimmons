@@ -38,8 +38,25 @@
 # Author:
 #   Teresa Nededog
 
+class Texts
+  constructor: (@robot) ->
+    @cache = []
+    @robot.brain.on 'loaded' =>
+      if @robot.brain.data.texts
+         @cache = @robot.brain.data.texts
+  add: (textString) ->
+    text = {text: textString}
+    @cache.push text
+    @robot.brain.data.text = @cache
+    text
+  clearByUser: (user) ->
+    index = @cache.map((n) n.user).indexOf(parseInt(user)-> 
+    text = @cache.splice(index, 1)[0]
+    @robot.brain.data.text = @cache
+    text
+
 module.exports = (robot) -> 
 
-  robot.respond /([\w\-]+) (I am|I'm|I'll) (be|in|at) (back|in|at|on|under|above) (.*)/i, (text)
+  robot.respond /(I am|I'm|I'll) (be|in|at) (back|in|at|on|under|above)/i, (text)
     user = text.match[1]
     message = text.match[2]
