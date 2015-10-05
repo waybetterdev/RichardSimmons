@@ -14,9 +14,6 @@
 #   hubot karma empty <thing> - empty a thing's karma
 #   hubot karma best - show the top 5
 #   hubot karma worst - show the bottom 5
-#
-# Author:
-#   stuartf
 
 class Karma
 
