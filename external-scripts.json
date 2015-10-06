@@ -13,5 +13,6 @@
   "hubot-shipit",
   "hubot-time-me",
   "hubot-schedule",
-  "hubot-jenkins-notifier"
+  "hubot-jenkins-notifier",
+  "hubot-whereyouat"
 ]
